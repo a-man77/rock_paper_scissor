@@ -36,3 +36,7 @@ const result = playRound(humanChoice, computerChoice);
 console.log(result);
 console.log("Human Score: " + humanscore);
 console.log("Computer Score: " + computerscore);
+functio playGame() {
+    for (let i = 0; i < 5; i++) {
+        playRound(getHumanChoice(), computerChoice);
+    }
