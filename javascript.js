@@ -10,13 +10,17 @@ console.log("Computer choice: " + computerChoice);  //we are logging the compute
 
 //making a functtionn to take get human choice
 function getHumanChoice() {
-    let humanChoice = prompt("Enter your choice (ROCK, PAPER, SCISSOR):"); 
     humanChoice = humanChoice.toUpperCase();
+    let humanChoice = prompt("Enter your choice (ROCK, PAPER, SCISSOR):"); 
+    
     return humanChoice;
 }
 console.log("Human choice: " + getHumanChoice()); 
 
-function playRound(humanChoice, computerChoice) {
+
+
+function  playGame() {
+    function playRound(humanChoice, computerChoice) {
     if (humanChoice === computerChoice) {
         return "It's a tie!";
     } else if (
@@ -31,12 +35,16 @@ function playRound(humanChoice, computerChoice) {
         return "Computer wins this round!";
     }
 }
+
 const humanChoice = getHumanChoice();
 const result = playRound(humanChoice, computerChoice);
 console.log(result);
 console.log("Human Score: " + humanscore);
 console.log("Computer Score: " + computerscore);
-functio playGame() {
-    for (let i = 0; i < 5; i++) {
-        playRound(getHumanChoice(), computerChoice);
-    }
+
+
+}
+
+for(let i = 0; i < 5; i++) {
+    playGame();
+}
